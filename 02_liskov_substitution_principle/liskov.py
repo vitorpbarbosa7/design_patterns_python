@@ -2,6 +2,8 @@
 making use of a function fot that, that is, a setter
 '''
 
+# Base class
+# Sup class
 class Rectangle:
     def __init__(self, width, height):
         self._height = height
