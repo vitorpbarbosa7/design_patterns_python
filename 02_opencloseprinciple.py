@@ -20,7 +20,7 @@ class Product:
 # OCP : The Open Close Principle says:
 # open for extension, close for modification
 # a class, once created, should not be modified, but only 
-# receive extensions considering current funcionanily
+# receive extensions considering current funcionality
 # because this game of modifications could go forever
 # this approach of adding keeps going and going and its not scalabe
 
