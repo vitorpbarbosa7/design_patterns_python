@@ -92,7 +92,7 @@ class HtmlBuilder:
 
 
 # with static method in which we can call it directly from class object
-builder = HtmlBuilder.create('ul')
+builder = HtmlElement.create('ul')
 # builder.add_child('li','hello')
 # builder.add_child('li','world')
 builder.add_child_fluent('li','hello').add_child_fluent('li','hello')
