@@ -15,6 +15,9 @@ class Person:
         return PersonBuilder()
 
 
+# In a good scenario we should not go back to PersonBuilder
+# or any other class to modify it
+# but only use others classes which inherits from it 
 class PersonBuilder:
     def __init__(self):
         self.person = Person()
