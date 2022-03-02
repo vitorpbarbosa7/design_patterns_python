@@ -46,7 +46,7 @@ class OldFashionedPrinter(Machine):
     # But imagine that I declare an object from this class, and this funcitons are here, so, 
     # i will whink that it does really do something
 
-
+''' Above code would be the correct way to do it'''
 # Correct way to do it
 class Printer:
     @abstractmethod
@@ -75,7 +75,7 @@ class Photocopier(Printer, Scanner):
         scan(document)
          # declare the action only here
         pass
-
+''' End of implementation '''
 
 ''' Example of abstractmethod
 import abc

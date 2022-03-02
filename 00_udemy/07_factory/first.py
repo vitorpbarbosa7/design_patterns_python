@@ -18,7 +18,7 @@ class Point:
     def __str__(self):
         return f'x: {self.x}, y: {self.y}'
 
-
+class PointFactory:
     @staticmethod
     def new_cartesian_point(x,y):
         return Point(x,y)
@@ -32,7 +32,7 @@ if __name__ == '__main__':
     # you can initialize the point, and then, define in which 
     # cartesian use it
     p = Point(2,3)
-    p2 = Point.new_polar_point(1,2) 
+    p2 = PointFactory.new_polar_point(1,2) 
     print(p, p2)
 
 

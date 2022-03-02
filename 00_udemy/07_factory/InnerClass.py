@@ -20,29 +20,28 @@ class Point:
     def __str__(self):
         return f'x: {self.x}, y: {self.y}'
 
+    class PointFactory:
+        # Factory method is returning the point concrete class
+        # @staticmethod
+        def new_cartesian_point(x,y):
+            p = Point()
+            p.x = x
+            p.y = y
+            return p
 
-class PointFactory:
-    # Factory method is returning the point concrete class
-    @staticmethod
-    def new_cartesian_point(x,y):
-        p = Point()
-        p.x = x
-        p.y = y
-        return p
-
-    @staticmethod
-    def new_polar_point(rho, theta):
-        p = Point()
-        p.x = rho * cos(theta)
-        p.y = rho * sin(theta)
-        return p
+        # @staticmethod
+        def new_polar_point(rho, theta):
+            p = Point()
+            p.x = rho * cos(theta)
+            p.y = rho * sin(theta)
+            return p
 
 
 if __name__ == '__main__':
     # you can initialize the point, and then, define in which
     # cartesian use it
     p = Point(2, 3)
-    p2 = PointFactory.new_polar_point(1, 2)
+    p2 = Point.PointFactory.new_polar_point(1, 2)
     print(p, p2)
 
 
