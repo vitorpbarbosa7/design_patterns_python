@@ -17,6 +17,7 @@ class PersonFactory():
     def create_person(self,name):
         person = Person(PersonFactory.idx, name)
         # iteractively idx attribute from class
+        # everytime you run this factory it augments the idx variable
         PersonFactory.idx += 1
         print(person)
 
