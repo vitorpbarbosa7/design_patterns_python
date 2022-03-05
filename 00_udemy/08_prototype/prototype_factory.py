@@ -40,7 +40,9 @@ class EmployeeFactory:
     @staticmethod
     def new_main_office_employee(name, suite):
         return EmployeeFactory.__new_employee(
+            # use the prototype
             proto = EmployeeFactory.main_office_employee, 
+            # and customize other attributes
             name = name, 
             suite = suite
         )
@@ -48,7 +50,9 @@ class EmployeeFactory:
     @staticmethod
     def new_aux_office_employee(name, suite):
         return EmployeeFactory.__new_employee(
+            # use the prototype
             proto = EmployeeFactory.aux_office_employee, 
+            # and customize other attributes
             name = name, 
             suite = suite
         )
