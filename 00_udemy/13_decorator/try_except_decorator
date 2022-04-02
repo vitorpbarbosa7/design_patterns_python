@@ -1,0 +1,23 @@
+
+
+def decorator_failure(func):
+    def func_wrapper(*args, **kwargs):
+        try:
+           return func(*args, **kwargs)
+        except Exception as e:
+            msg = f'Vaz is crazy'
+            msg_error = f'error: {e}'
+            print(msg + msg_error)
+            return None
+    return func_wrapper
+
+@decorator_failure
+def functionality(number, character):
+
+    print(f'{number + character}')
+
+if __name__ == '__main__':
+
+    NUMBER = 5
+    CHARACTER = 6
+    functionality(NUMBER, CHARACTER)

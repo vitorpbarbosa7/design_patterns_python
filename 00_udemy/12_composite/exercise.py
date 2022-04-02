@@ -12,7 +12,6 @@ class ValueContainer(Iterable, ABC):
                 result += i
         return result
 
-
 class SingleValue(ValueContainer):
     def __init__(self, value):
         self.value = value
