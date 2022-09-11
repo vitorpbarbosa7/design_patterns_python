@@ -1,13 +1,11 @@
-
-
 def decorator_failure(func):
     def func_wrapper(*args, **kwargs):
         try:
            return func(*args, **kwargs)
         except Exception as e:
-            msg = f'Vaz is crazy'
-            msg_error = f'error: {e}'
-            print(msg + msg_error)
+            msg = f'Function failed \n'
+            msg_exception = f'exception: {e}'
+            print(msg + msg_exception)
             return None
     return func_wrapper
 
@@ -18,6 +16,6 @@ def functionality(number, character):
 
 if __name__ == '__main__':
 
-    NUMBER = 5
+    NUMBER = '2'
     CHARACTER = 6
     functionality(NUMBER, CHARACTER)
