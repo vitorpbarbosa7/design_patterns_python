@@ -26,6 +26,8 @@ class Square(Shape):
 # inheriting from Shape so that works with both Square and Circle
 class ColoredShape(Shape):
 	def __init__(self, shape:Type[Shape], color:str):
+		if isinstance(shape, ColoredShape):
+			raise Exception('Cannot apply recursively decorator')
 		self.shape = shape
 		self.color = color
 
@@ -49,3 +51,6 @@ if __name__ == '__main__':
 
 	red_cilinder = Quota(shape = red_circle, quota = 5)
 	print(red_cilinder)
+
+	mixed_color = ColoredShape(ColoredShape(Circle(7), 'purple'), 'cyan')
+	print(mixed_color) 
