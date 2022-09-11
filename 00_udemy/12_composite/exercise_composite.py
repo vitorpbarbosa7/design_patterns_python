@@ -18,6 +18,7 @@ class SingleValue(SumElements):
     def __init__(self, value):
         self.value = value
     
+    # quando chamo o sum self ele vai utiliar o iteravel que sempre retorna o proprio valor do elemento, por isso da certo 
     def __iter__(self):
         yield self.value
 

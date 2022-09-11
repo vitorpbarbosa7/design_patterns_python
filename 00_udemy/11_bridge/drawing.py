@@ -11,7 +11,7 @@
 
 from typing import Type
 
-from abc import ABC, abstractmethod
+from abc import ABC
 
 class Renderer(ABC):
     def render_circle(self, radius):
