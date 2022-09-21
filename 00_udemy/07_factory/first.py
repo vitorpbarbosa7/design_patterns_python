@@ -24,6 +24,7 @@ class PointFactory:
         return Point(x,y)
 
     @staticmethod
+    # adapter ?
     def new_polar_point(rho, theta):
         return Point(rho * cos(theta), rho * sin(theta))
 

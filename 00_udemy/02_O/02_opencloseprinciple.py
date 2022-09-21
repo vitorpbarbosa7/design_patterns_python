@@ -19,6 +19,11 @@ class Product:
 
 # OCP : The Open Close Principle says:
 # open for extension, close for modification
+
+# como uma classe que calcula metrica
+# nao mudar a maneira de calcular a metrica, isso dificilmente vai ser necessario mudar
+# mas adicionar uma nova métrica, é ok 
+
 # a class, once created, should not be modified, but only 
 # receive extensions considering current funcionality
 # because this game of modifications could go forever
