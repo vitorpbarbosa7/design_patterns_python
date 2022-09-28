@@ -37,10 +37,10 @@ class TextProcessor:
         self.buffer = []
 
     def append_list(self, items:Union[List, int, str]):
+        self.strategy.start(self.buffer)
         for item in items:
-            self.strategy.start(self.buffer)
             self.strategy.add_list_item(self.buffer, item)
-            self.strategy.end(self.buffer)
+        self.strategy.end(self.buffer)
 
     def __str__(self):
         return '\n'.join([_str for _str in self.buffer])
