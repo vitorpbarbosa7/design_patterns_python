@@ -1,4 +1,14 @@
 import copy
+
+# class Continent ... and that goes on from down to top
+
+class Country:
+    def __init__(self, continent, country):
+        self.continent = continent
+        self.country = country
+
+    def __str__(self):
+        return f'{self.country} from {self.continent}'
  
 class Address:
     def __init__(self, street_address, city, country):
@@ -22,7 +32,7 @@ class Person:
 # how to make it easy to make another person to live at the same addres? 
 
 if __name__ == '__main__':
-    john = Person('Elliot', Address('217 East Broadway','New York','USA'))
+    john = Person('Elliot', Address('217 East Broadway','New York',Country('America', 'USA')))
 
     jane = copy.deepcopy(john)
     # now I can customize the address
