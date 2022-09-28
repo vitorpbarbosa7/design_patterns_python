@@ -16,7 +16,7 @@ class StrategyInterface(ABC):
 class MarkdownStrategy(StrategyInterface):
 
     def add_list_item(self, buffer, item):
-        buffer.append(rf' * {item} \n')
+        buffer.append(rf' * {item}')
 
 
 class HtmlListStrategy(StrategyInterface):
@@ -25,7 +25,7 @@ class HtmlListStrategy(StrategyInterface):
         buffer.append(rf'<ul> ')
 
     def end(self, buffer):
-        buffer.append(rf' </ul> \n')
+        buffer.append(rf' </ul> ')
 
     def add_list_item(self, buffer, item):
         buffer.append(rf' <li> {item} </li>')
