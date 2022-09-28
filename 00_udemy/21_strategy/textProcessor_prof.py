@@ -25,10 +25,10 @@ class HtmlListStrategy(StrategyInterface):
         buffer.append(rf'<ul> ')
 
     def end(self, buffer):
-        buffer.append(rf' </ul> \n')
+        buffer.append(rf' <\ul> \n')
 
     def add_list_item(self, buffer, item):
-        buffer.append(rf' <li> {item} </li>')
+        buffer.append(rf'{item}')
 
 # Concrete use
 class TextProcessor:
