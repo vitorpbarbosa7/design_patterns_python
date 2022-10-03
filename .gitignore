@@ -1,5 +1,9 @@
 .swp
+*.venv
+venv
 .venv
 .DS_Store
 .__pycache__
 *.ipynb_checkpoints
+./design_patterns_codeguru.pdf
+./.git/objects/06/a439be039eac813ea354ce90b35300b4191482
